@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MER Suite Sign In </title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.6.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta2/css/all.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+    <!---------------------------------------------------- icon animation --------------------------------------------->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.2.1/font-awesome-animation.min.css">
+    <!---------------------------------------------------- icon animation --------------------------------------------->
+
+
+    <!-- ----------------------------------FOR BOOTSTRAP SLIDER ------------------- -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:500" rel="stylesheet">
+    <script>!function (e) { "undefined" == typeof module ? this.charming = e : module.exports = e }(function (e, n) { "use strict"; n = n || {}; var t = n.tagName || "span", o = null != n.classPrefix ? n.classPrefix : "char", r = 1, a = function (e) { for (var n = e.parentNode, a = e.nodeValue, c = a.length, l = -1; ++l < c;) { var d = document.createElement(t); o && (d.className = o + r, r++), d.appendChild(document.createTextNode(a[l])), n.insertBefore(d, e) } n.removeChild(e) }; return function c(e) { for (var n = [].slice.call(e.childNodes), t = n.length, o = -1; ++o < t;)c(n[o]); e.nodeType === Node.TEXT_NODE && a(e) }(e), e });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
+    <!-- ----------------------------------FOR BOOTSTRAP SLIDER END ------------------- -->
+
+    <link rel="stylesheet" href="Sign In.css">
+
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Welcome!</h1>
+
+                <span>Use your email for registration</span>
+                <input type="username" id="username" placeholder="Email" />
+                <input type="password" id="password" placeholder="Password" />
+                <div id="notification"></div>
+
+                <div class="notif-container">
+
+                    <div id="GREN"
+                        class="alert fade alert-simple alert-success alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show col-12">
+                        <button type="button" class="close font__size-18" data-dismiss="alert">
+                            <span aria-hidden="true"><a>
+                                    <i class="fa fa-times greencross"></i>
+                                </a></span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                        <i class="start-icon far fa-check-circle faa-tada animated"></i>
+                        <strong class="font__weight-semibold">Success!</strong> You're confirmed to be logged in
+                        successfully!.
+                    </div>
+
+                    <div id="RED"
+                        class="alert fade alert-simple alert-danger alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show col-12"
+                        role="alert" data-brk-library="component__alert">
+                        <button type="button" class="close font__size-18" data-dismiss="alert">
+                            <span aria-hidden="true">
+                                <i class="fa fa-times danger "></i>
+                            </span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                        <i class="start-icon far fa-times-circle faa-pulse animated"></i>
+                        <strong class="font__weight-semibold">Oh snap!</strong> Change a few things up and try
+                        submitting again.
+                    </div>
+
+                </div>
+
+
+                <!-- <div class="drp-dwn mt-2"> -->
+                <div class="dropdown mt-2">
+                    <button class="btn btn-primary custom-dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sign-In as:
+                        <!-- <i class="fas fa-arrow-circle-down ml-2"></i> -->
+                    </button>
+                    <ul class="dropdown-menu animated fadeInDown" aria-labelledby="dropdownMenuButton">
+                        <!-- <div class="dropdown-header">Sign-In as:</div> -->
+                        <li><a href="#admin" data-value="Admin">Admin</a></li>
+                        <li><a href="#optometrist" data-value="Optometrist">Optometrist</a></li>
+                        <li><a href="#secretary" data-value="Secretary">Secretary</a></li>
+                    </ul>
+                </div>
+                <!-- </div> -->
+                <a href="#">Forgot your password?</a>
+
+                <!------------------------------------------ MAIN SIGN IN BUTTON ------------------------------------------------>
+                <button class="signIn-2" onclick="checkLogin()">Sign In</button>
+                <!------------------------------------------ MAIN SIGN IN BUTTON END -------------------------------------------->
+           
+            </form>
+        </div>
+
+        <div class="form-container images-container">
+            <form action="#">
+                <h1 class="mrsut">MER Suite</h1>
+
+                <!-- --------------------------------------------------------------------------------------------------------------------------------------- -->
+
+                <section>
+
+                    <div class="swiper-container slideshow">
+
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide slide">
+                                <div class="slide-image">
+                                    <img src="slide1.jpg" alt="Slide 1">
+                                </div>
+                                <span class="slide-title">Exotic places</span>
+                            </div>
+
+                            <div class="swiper-slide slide">
+                                <div class="slide-image">
+                                    <img src="slide2.jpg" alt="Slide 2">
+                                </div>
+                                <span class="slide-title">Meet ocean</span>
+                            </div>
+
+                            <div class="swiper-slide slide">
+                                <div class="slide-image">
+                                    <img src="slide3.jpg" alt="Slide 3">
+                                </div>
+                                <span class="slide-title">Around the world</span>
+                            </div>
+
+                            <div class="swiper-slide slide">
+                                <div class="slide-image">
+                                    <img src="slide4.jpg" alt="Slide 4">
+                                </div>
+                                <span class="slide-title">Around the world</span>
+                            </div>
+
+                            <div class="swiper-slide slide">
+                                <div class="slide-image">
+                                    <img src="slide5.jpg" alt="Slide 5">
+                                    <!-- style="background-image: url(https://images.unsplash.com/photo-1482059470115-0aadd6bf6834?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=267bba9a4e280ec64388fe8fb01e9d1b&auto=format&fit=crop&w=1950&q=80)"> -->
+                                </div>
+                                <span class="slide-title">Around the world</span>
+                            </div>
+
+                            <!--         <div class="swiper-slide slide">
+                            <div class="slide-imageswiper-lazy" data-background="https://images.unsplash.com/photo-1538083024336-555cf8943ddc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=66b476a51b19889e13182c0e4827af18&auto=format&fit=crop&w=1950&q=80">
+                            </div>
+                            </div>
+                            <span class="slide-title">Exotic places</span>
+                          </div>
+                        
+                          <div class="swiper-slide slide">
+                            <div class="slide-image swiper-lazy" data-background="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e07d2457879a4e15577ec75a31023e47&auto=format&fit=crop&w=2134&q=80">
+                            </div>
+                            <span class="slide-title">Meet ocean</span>
+                          </div>
+                        
+                          <div class="swiper-slide slide">
+                            <div class="slide-image swiper-lazy" data-background="https://images.unsplash.com/photo-1482059470115-0aadd6bf6834?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=267bba9a4e280ec64388fe8fb01e9d1b&auto=format&fit=crop&w=1950&q=80">
+                            </div>
+                            <span class="slide-title">Around the world</span>
+                          </div> -->
+
+                        </div>
+
+                        <div class="slideshow-pagination"></div>
+
+                        <div class="slideshow-navigation">
+                            <div class="slideshow-navigation-button prev"><span class="fas fa-chevron-left"></span>
+                            </div>
+                            <div class="slideshow-navigation-button next"><span class="fas fa-chevron-right"></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+
+
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <!-- <h1>icon ng MER Suite</h1> -->
+                    <img id="mrsut-logo" src="Logo.png" alt="MER Suite logo">
+                    <!-- <p>To keep connected with us please login with your personal info</p> -->
+                    <div class="sidebar-brand">
+                        <!-- <img src="Logo.png" alt="My Image" width="40" height="40"> -->
+                        <a class="animate-MER" href="#">MER Suite</a>
+                        <div class="line mt-3"></div>
+                    </div>
+                    <button class="ghost" id="RCOC">Rañon Cruz Optical Clinic</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello there!</h1>
+                    <p>Enter your MER Suite account and start journey with us</p>
+                    <button class="ghost" id="signIn-1">Sign In</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>
+            @2023 Rañon Cruz Optometrist Contactlens Practitioner | All Rights Reserved
+            <a target="_blank"
+                href="https://www.facebook.com/profile.php?id=100054419022457&__cft__[0]=AZWoIHgGqbBltz5T1kA5jyWFMaz-56M9Levy6hCZqBxOrO6HH_lavk6Fh7ce6PwcDWHZmR0LFvTmRt0VHZ7FpoOLrBtLnddjSkOpugH1nZ4ml4e0m5sJYD4mjQr0d1u4XvZIhZORrysNqrDXVm1w6saDtXfZHT7goAP8v2Pwm_Sm675KLSsah9jV3NADlW9l0nw&__tn__=-]K-R">here</a>.
+        </p>
+    </footer>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+
+    <script src="Sign In.js"></script>
+</body>
+
+</html>

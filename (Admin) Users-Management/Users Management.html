@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+         <meta charset="UTF-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width,initial-scale=1.0"> 
+
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.6.2/css/bootstrap.min.css">
+         
+             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.6.2/js/bootstrap.min.js"></script>
+
+             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+             <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+             <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta2/css/all.css" />
+
+             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+             
+             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
+
+             <link rel="stylesheet" href="Users Management.css">
+
+             <title>Users Management Bootstrap</title>
+    </head>
+
+    <body>
+        
+      <div id="wrapper">
+        <div class="overlay"></div>
+         
+             <!-- Sidebar -->
+         <nav class="navbar navbar-inverse fixed-top" id="sidebar-wrapper" role="navigation">
+          <ul class="nav sidebar-nav">
+            <div class="sidebar-header">
+            <div class="sidebar-brand">
+              <img src="MER-Suite logo/Elements/Logo.png" alt="My Image" width="40" height="40">
+              <a href="#">MER Suite</a>
+              <div class="line mt-3"></div>
+            </div>
+            </div>
+            
+            <li id="db-btn">
+              <a class="nav-link btn btn-block" href="#">
+                  <i class="fa-sharp fa-light fa-chart-mixed"></i>
+                  <div>Dashboard</div>
+              </a>
+            </li>
+            <li id="PIR-btn">
+              <a id="tryto" class="nav-link btn btn-block" href="#">
+                  <i class="fa-thin fa-sensor-cloud" style="color: #ffffff;"></i> 
+                  <div>PIR Back-up</div>
+              </a>
+            </li>
+            <li id="merb-btn">
+              <a class="nav-link btn btn-block" href="#">
+                  <i class="fa-light fa-table-tree" style="color: #ffffff;"></i>
+                  <div>MER Back-up</div>
+              </a>
+             </li>
+             <li id="usersm-btn">
+              <a class="nav-link btn btn-block" href="#">
+                  <i class="fa-duotone fa-users-medical" style="--fa-primary-color: #06c7e0; --fa-secondary-color: #fafafa; --fa-secondary-opacity: 01.4;"></i>
+                  <div>Users Management</div>
+              </a>
+             </li>
+             <li>
+              <a class="nav-link btn btn-block" href="#">
+                  <!-- <i class="fa-duotone fa-chevrons-left" style="--fa-primary-color: #b9a7a7; --fa-primary-opacity: 0.5; --fa-secondary-color: #c5b4b4; --fa-secondary-opacity: 01;"></i> -->
+                  <i id="signout-i" class="fa-regular fa-arrow-right-from-bracket fa-rotate-180" style="color: #e6e6e6;"></i>
+                  Sign out   
+              </a>
+             </li>
+            
+ 
+             <!-- Button for opening new window -->
+
+             <!-- <div class="container text-center mt-5">
+              <h1>Responsive Page with Button</h1>
+              <p>This is a responsive Bootstrap 4 webpage.</p>
+              <button class="btn btn-primary" onclick="openNewWindow()">Open New Window</button>
+             </div> -->
+             <!-- ---------------------------- -->
+
+           
+
+            <!-- <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#team">Team</a></li>
+            <li class="dropdown">
+            <a href="#works" class="dropdown-toggle"  data-toggle="dropdown">Works <span class="caret"></span></a>
+          <ul class="dropdown-menu animated fadeInLeft" role="menu">
+           <div class="dropdown-header">Dropdown heading</div>
+           <li><a href="#pictures">Pictures</a></li>
+           <li><a href="#videos">Videeos</a></li>
+           <li><a href="#books">Books</a></li>
+           <li><a href="#art">Art</a></li>
+           <li><a href="#awards">Awards</a></li>
+           </ul>
+           </li>
+           <li><a href="#services">Services</a></li>
+           <li><a href="#contact">Contact</a></li>
+           <li><a href="#followme">Follow me</a></li> -->
+
+           </ul>
+       </nav>
+             <!-- /#sidebar-wrapper -->
+     
+             <!-- Page Content -->
+             <div id="page-content-wrapper">
+                 <button type="button" class="hamburger animated fadeInLeft is-closed" data-toggle="offcanvas">
+                     <span class="hamb-top"></span>
+               <span class="hamb-middle"></span>
+             <span class="hamb-bottom"></span>
+                 </button>
+
+
+                 <div class="container">
+                  <!-- Right slide window -->
+                  <div class="row"> 
+
+                      <div class="container  text-md-right ">
+                        <div class="useri-admn-btn">
+                          <div class="col-md-12 ">
+
+                                                     
+                         <!-- <div class="container text-md-right mt-1">
+                          <div class="row">
+                            <div class="col-md-12"> -->
+                                          <!-- Button add modal -->
+                                          <button type="button" id="modalbtn" data-toggle="modal" data-target="#staticBackdrop">
+                                            <i class="fa-duotone fa-circle-plus" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>                     
+                                          </button>
+                            <!-- </div>
+                          </div>
+                        </div> -->
+
+                                          <!-- User icon -->
+                                          <button type="button" id="user-i" class="btn btn-outline-secondary  ">
+                                            <i class="fa-duotone fa-circle-user fa-lg"></i>
+                                          </button>
+                                          <!--  Admin Dropdown  -->
+                                          <button type="button" id="admn-btn" class="btn btn-outline-secondary dropdown-toggle col-md-13 text-md-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Admin
+                                          </button>
+                                          <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Personal Information</a>
+                                            <a class="dropdown-item" href="#">Inbox</a>
+                                            <a class="dropdown-item" href="#">Settings</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">About</a>
+                                          </div>
+                          </div>
+                        </div>
+                       </div>
+                    
+                         <div class="col text-center">
+                          <div class="userm-txt">
+                            Users Management
+                          </div>                                 
+                         </div>
+
+                         <div class="container mt-4">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheckbox">
+                            <label class="custom-control-label" for="customCheckbox">Select all</label>
+                          </div>
+                         </div>
+
+                         <div class="container col-lg-13 text-lg-right">
+                          <form id="resetForm">
+                            <!--              pwede dito ilagay yung irereset kung mag wwork              -->
+                            <button type="button" class="btn btn-secondary" id="restoreBtn">RESTORE</button>
+                          </form>
+                         </div>
+
+
+                    
+                         <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="user-reg-form">User registration Form</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <!-- <span aria-hidden="true">&times;</span> -->
+                              <i class="fa-sharp fa-solid fa-circle-xmark" style="color: #000000;"></i>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                          
+                              <form>
+                                  <div class="form-group">
+                                    <label id="name-lbl" for="exampleInputName">Name:</label>
+                                    <input type="name" class="form-control" id="input-name" aria-describedby="emailHelp">
+                                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                  </div>
+                  
+                                  <div class="form-group">
+                                    <label id="username-lbl" for="exampleInputUsername">Username:</label>
+                                    <input type="username" class="form-control" id="input-username">
+                                  </div>
+                  
+                                  <div class="form-group">
+                                      <label id="pass-lbl" for="exampleInputPassword">Password:</label>
+                                      <input type="password" class="form-control" id="input-password">
+                                  </div>
+                                  <!-- <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                  </div> -->
+                                  <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+                  
+                                  <!-- <small id="Access-type" class="form-text text-muted">Access Type</small> -->
+                                  <div class="form-group">
+                                      <label id="AT-lbl" for="exampleFormControlSelect1">Access Type</label>
+                                      <select class="form-control" id="dropdown">
+                                        <option>Administrator</option>
+                                        <option>Optometrist</option>
+                                        <option>Secretary</option>                
+                                      </select>
+                                    </div>
+                  
+                                </form>
+                          
+                          </div>
+                               <div class="modal-footer">
+                                 <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+                                 <button type="button" id="sv-btn" class="btn btn-primary" data-dismiss="modal">SAVE</button>
+                               </div>
+                        </div>
+                      </div>
+                    </div>                                                                  
+                  </div> 
+
+                  <div class="container">
+                    <nav aria-label="Page navigation example" id="pages" class="custom-pagination mt-5">
+                      <ul class="pagination justify-content-end">
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                          </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                          <a id="tridot" class="page-link" href="#" aria-label="elipsis">
+                            <i class="fa-solid fa-ellipsis" style="color: #000000;"></i>
+                          </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">99</a></li>
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                    </div>
+
+                 </div>
+             </div>
+             <!-- /#page-content-wrapper -->
+     
+         </div>
+         <!-- /#wrapper -->
+
+
+
+         <!-- Scripts for opening new window with button -->
+  <!-- <script>
+    function openNewWindow() {
+      window.open('https://www.example.com', '_blank');
+    }
+  </script> -->
+         <!-- ------------------------------------------ -->
+
+ <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+ <script src="Users Management.js"></script>
+
+    </body>
+</html>
